@@ -10,10 +10,10 @@
 		2241027325054D0B0068E19C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2241027225054D0B0068E19C /* AppDelegate.m */; };
 		2241027625054D0B0068E19C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2241027525054D0B0068E19C /* SceneDelegate.m */; };
 		2241027925054D0B0068E19C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2241027825054D0B0068E19C /* ViewController.m */; };
-		2241027C25054D0B0068E19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2241027A25054D0B0068E19C /* Main.storyboard */; };
 		2241027E25054D0D0068E19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2241027D25054D0D0068E19C /* Assets.xcassets */; };
 		2241028125054D0D0068E19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2241027F25054D0D0068E19C /* LaunchScreen.storyboard */; };
 		2241028425054D0D0068E19C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2241028325054D0D0068E19C /* main.m */; };
+		2241028B25054D1F0068E19C /* ThermodoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2241028A25054D1F0068E19C /* ThermodoSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +24,11 @@
 		2241027525054D0B0068E19C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		2241027725054D0B0068E19C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2241027825054D0B0068E19C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2241027B25054D0B0068E19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2241027D25054D0D0068E19C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2241028025054D0D0068E19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2241028225054D0D0068E19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2241028325054D0D0068E19C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2241028A25054D1F0068E19C /* ThermodoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ThermodoSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2241028B25054D1F0068E19C /* ThermodoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +68,7 @@
 				2241027525054D0B0068E19C /* SceneDelegate.m */,
 				2241027725054D0B0068E19C /* ViewController.h */,
 				2241027825054D0B0068E19C /* ViewController.m */,
-				2241027A25054D0B0068E19C /* Main.storyboard */,
+				2241028A25054D1F0068E19C /* ThermodoSDK.framework */,
 				2241027D25054D0D0068E19C /* Assets.xcassets */,
 				2241027F25054D0D0068E19C /* LaunchScreen.storyboard */,
 				2241028225054D0D0068E19C /* Info.plist */,
@@ -134,7 +135,6 @@
 			files = (
 				2241028125054D0D0068E19C /* LaunchScreen.storyboard in Resources */,
 				2241027E25054D0D0068E19C /* Assets.xcassets in Resources */,
-				2241027C25054D0B0068E19C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2241027A25054D0B0068E19C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2241027B25054D0B0068E19C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2241027F25054D0D0068E19C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +285,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH3585NP44;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Thermos",
+				);
 				INFOPLIST_FILE = Thermos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +309,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EH3585NP44;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Thermos",
+				);
 				INFOPLIST_FILE = Thermos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
